@@ -13,7 +13,9 @@ body {
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
 }
-
+#order{
+    text-shadow: -1px -1px 0 var(--tg-theme-text-color), 1px -1px 0 var(--tg-theme-text-color), -1px 1px 0 var(--tg-theme-text-color), 1px 1px 0 var(--tg-theme-text-color);
+}
 #main {
     width: 100%;
     padding: 18px;
