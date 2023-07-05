@@ -20,14 +20,20 @@ body {
     text-align: center;
 }
 #buy{
-    background-color: rgb(239, 215, 250);
+    color: var(--tg-theme-button-color);
+    background: var(--tg-theme-button-text-color);
 }
 h1 {
     font-family: 'Righteous', cursive;
     font-size: 50px;
     margin-bottom: 30px;
 }
-
+h2 {
+    font-family: 'Courier';
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
 img {
     width: 200px;
     margin: 20px auto;
@@ -57,7 +63,8 @@ button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
 .btn {
-    background-color: rgba(228, 228, 228, 0.438);
+    color: var(--tg-theme-text-color);
+    background-color: rgba(228, 228, 228, 0.096);
     width: 146px;
     border: none;
     border-radius: 10px;
@@ -82,10 +89,9 @@ input {
     padding: 15px 10px;
     font-size: 14px;
     border: 2px solid silver;
-    background-color: rgb(239, 215, 250);
     border-radius: 5px;
 }
 
 input:focus {
-    border-color: #dbaf5d;
+    border-color: var(--tg-theme-secondary-bg-color);
 }
