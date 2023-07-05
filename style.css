@@ -58,7 +58,6 @@ button:hover {
 }
 .btn {
     background-color:var(--tg-theme-button-text-color);
-    outline:solid;
     width: 146px;
     border: none;
     border-radius: 10px;
