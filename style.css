@@ -57,10 +57,11 @@ button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
 .btn {
-    background-image: url(https://i.imgur.com/KBInWHG.png);
+    background-color:var(--tg-theme-button-text-color);
+    outline:solid;
+    outline-color:var(--tg-theme-button-text-color);
     width: 146px;
     border: none;
-    color: rgb(141, 141, 141);
     padding: 12px 16px;
     font-size: 16px;
     cursor: pointer;
