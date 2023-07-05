@@ -72,7 +72,7 @@ button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
 .btn {
-    color: var(--tg-theme-text-color);
+    color: rgba(221, 221, 221, 0.911);
     background-color: rgba(228, 228, 228, 0.096);
     width: 146px;
     border: none;
