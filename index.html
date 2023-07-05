@@ -18,12 +18,12 @@
         <button class="btn" onclick="document.location='https://t.me/greendexc'"><i class="fa fa-telegram"> contact</i></button>
     </div>
     <form id="form">
-        <h1>Оформление покупки</h1>
-        <input type="text" placeholder="Имя" id="user_name">
-        <input type="text" placeholder="Email" id="user_email">
-        <input type="text" placeholder="Телефон" id="user_phone">
+        <h2>Making a purchase</h2>
+        <input type="text" placeholder="Stream nickname" id="suser_name">
+        <input type="text" placeholder="Your nickname" id="user_name">
+        <input type="text" placeholder="Your telegram" id="user_tg">
         <div id="error"></div>
-        <button id="order">Оформить заказ</button>
+        <button id="order">purchase</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
@@ -35,15 +35,15 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+            document.getElementById("suser_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
 
         });
 
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
-            let name = document.getElementById("user_name").value;
-            let email = document.getElementById("user_email").value;
-            let phone = document.getElementById("user_phone").value;
+            let name = document.getElementById("suser_name").value;
+            let email = document.getElementById("user_name").value;
+            let phone = document.getElementById("user_tg").value;
             if (name.length < 5) {
                 document.getElementById("error").innerText = 'Ошибка в имени';
                 return;
