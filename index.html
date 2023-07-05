@@ -21,7 +21,7 @@
         <h2>Making a purchase</h2>
         <input type="text" placeholder="Streamer nickname" id="streamer_name">
         <input type="text" placeholder="Your nickname" id="user_name">
-        <input type="text" placeholder="Your telegram" id="user_telega">
+        <input type="text" placeholder="Your telegram" id="user_tg">
         <div id="error"></div>
         <button id="order">purchase</button>
     </form>
@@ -35,32 +35,32 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_telega").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+            document.getElementById("user_tg").value = tg.initDataUnsafe.user.first_name;
 
         });
 
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
             let name = document.getElementById("streamer_name").value;
-            let email = document.getElementById("user_name").value;
-            let phone = document.getElementById("user_telega").value;
+            let name2 = document.getElementById("user_name").value;
+            let utelegram = document.getElementById("user_tg").value;
             if (name.length < 3) {
                 document.getElementById("error").innerText = 'Ошибка в никнейме';
                 return;
             }
-            if (email.length < 3) {
+            if (name2.length < 3) {
                 document.getElementById("error").innerText = 'Ошибка в никнейме';
                 return;
             }
-            if (phone.length < 3) {
+            if (utelegram.length < 3) {
                 document.getElementById("error").innerText = 'Ошибка в телеграме';
                 return;
             }
 
             let data = {
-                streamer_name: name,
-                user_name: name2,
-                user_telega: telegram,
+                name: name,
+                name2: name2,
+                utelegram: utelegram
             }
 
             tg.sendData(JSON.stringify(data));
