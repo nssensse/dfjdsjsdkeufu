@@ -9,7 +9,6 @@
 
 </head>
 <body>
-<!--страницу можно разместить на GitHub, если нет сайта или удаленного сервера-->
     <div id="main">
         <h1>Онлайн магазин твич подписок</h1>
         <img src="https://i.imgur.com/CzgYSKM.png">
@@ -34,32 +33,32 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+            document.getElementById("user_telega").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
 
         });
 
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
-            let name = document.getElementById("user_name").value;
-            let email = document.getElementById("user_email").value;
-            let phone = document.getElementById("user_phone").value;
+            let name = document.getElementById("streamer_name").value;
+            let email = document.getElementById("user_name").value;
+            let phone = document.getElementById("user_telega").value;
             if (name.length < 3) {
-                document.getElementById("error").innerText = 'Ошибка в имени';
+                document.getElementById("error").innerText = 'Ошибка в никнейме';
                 return;
             }
             if (email.length < 3) {
-                document.getElementById("error").innerText = 'Ошибка в email';
+                document.getElementById("error").innerText = 'Ошибка в никнейме';
                 return;
             }
             if (phone.length < 3) {
-                document.getElementById("error").innerText = 'Ошибка в номере телефона';
+                document.getElementById("error").innerText = 'Ошибка в телеграме';
                 return;
             }
 
             let data = {
                 name: name,
-                email: email,
-                phone: phone,
+                email: name2,
+                phone: telegram,
             }
 
             tg.sendData(JSON.stringify(data));
