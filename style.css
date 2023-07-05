@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap');
+@import url('db.onlinewebfonts.com/c/d45c595a0219ea91eb5851cf0f8f96d1?family=RF+Krabuler');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@1,900&display=swap');
 
 * {
     margin: 0;
@@ -7,7 +9,6 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
@@ -19,16 +20,16 @@ body {
     text-align: center;
 }
 #buy{
-    background-color: antiquewhite;
+    background-color: rgb(239, 215, 250);
 }
 h1 {
+    font-family: 'Righteous', cursive;
     margin-top: 50px;
     margin-bottom: 10px;
-	font-family: monaco,Consolas,Lucida Console,monospace; 
 }
 
 img {
-    width: 70px;
+    width: 200px;
     margin: 30px auto;
 }
 
