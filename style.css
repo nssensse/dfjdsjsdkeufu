@@ -44,7 +44,7 @@ button {
     border-radius: 5px;
     margin-top: 50px;
     height: 60px;
-    width: 350px;
+    width: 300px;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
@@ -57,7 +57,7 @@ button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
 .btn {
-    width: 175px;
+    width: 150px;
     background-color: var(--tg-theme-button-color);
     border: none;
     color: white;
