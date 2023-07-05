@@ -16,7 +16,7 @@ body {
 
 #main {
     width: 100%;
-    padding: 20px;
+    padding: 18px;
     text-align: center;
 }
 #buy{
@@ -25,13 +25,12 @@ body {
 h1 {
     font-family: 'Righteous', cursive;
     font-size: 50px;
-
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 img {
     width: 200px;
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 p {
@@ -58,7 +57,7 @@ button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
 .btn {
-    background-color: rgb(228, 228, 228);
+    background-color: rgba(228, 228, 228, 0.438);
     width: 146px;
     border: none;
     border-radius: 10px;
@@ -88,5 +87,5 @@ input {
 }
 
 input:focus {
-    border-color: #db5d5d;
+    border-color: #dbaf5d;
 }
