@@ -24,8 +24,9 @@ body {
 }
 h1 {
     font-family: 'Righteous', cursive;
+    font-size: 50px;
     margin-top: 50px;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 img {
