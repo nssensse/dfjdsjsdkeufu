@@ -45,15 +45,6 @@
         window.TelegramWebviewProxy.postEvent('web_app_setup_back_button', JSON.stringify({
   is_visible: true
 }));
-Telegram.WebApp.onEvent('mainButtonClicked', function(){
-    tg.sendData(JSON.stringify('пенис')); 
-});
-Telegram.WebApp.onEvent('backButtonClicked', function(){
-    tg.sendData(JSON.stringify('пенис назад')); 
-});
-
-
-
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
             let name = document.getElementById("suser_name").value;
