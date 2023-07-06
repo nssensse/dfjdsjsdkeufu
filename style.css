@@ -99,7 +99,7 @@ input {
     margin: 10px 5%;
     padding: 15px 10px;
     font-size: 14px;
-    background-color: #575757;
+    background-color: rgba(228, 228, 228, 0.096);
     border: 0.5px solid rgba(160, 160, 160, 0.671);
     border-radius: 5px;
 }
