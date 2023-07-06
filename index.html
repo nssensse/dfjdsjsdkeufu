@@ -42,11 +42,6 @@
             document.getElementById("user_tg").value = tg.initDataUnsafe.user.username;
 
         });
-        window.TelegramWebviewProxy.postEvent('web_app_setup_back_button', JSON.stringify({
-  is_visible: true
-}));
-
-
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
             let name = document.getElementById("suser_name").value;
