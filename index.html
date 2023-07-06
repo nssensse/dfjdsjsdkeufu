@@ -39,11 +39,13 @@
             document.getElementById("user_tg").value = tg.initDataUnsafe.user.username;
 
         });
+        window.parent.postMessage(JSON.stringify({
+  eventType: 'web_app_setup_back_button',
+  eventData: {is_visible: true},
+}), 'https://web.telegram.org');
         const mainButton = Telegram.WebApp.MainButton;
         MainButton.setText('penis');
         MainButton.show();
-        MainButton.onClick(() => alert('submitted'));
-        mainButton.show();
         Telegram.WebApp.onEvent('mainButtonClicked', function(){
 	    tg.sendData("penis"); 
 	//при клике на основную кнопку отправляем данные в строковом виде
