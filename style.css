@@ -66,14 +66,14 @@ button {
     cursor: pointer;
     transition: all 500ms ease;
     color: var(--tg-theme-button-color);
-    border: 1px solid var(--tg-theme-text-color);
+    border: 0.5px solid var(--tg-theme-text-color);
 }
 
 button:hover {
     background: var(--tg-theme-secondary-bg-color);
 }
 .btn {
-    border: 1px solid var(--tg-theme-text-color);
+    border: 0.5px solid var(--tg-theme-text-color);
     color: rgba(221, 221, 221, 0.911);
     background-color: rgba(228, 228, 228, 0.096);
     width: 146px;
@@ -100,7 +100,7 @@ input {
     padding: 15px 10px;
     font-size: 14px;
     background-color: #575757;
-    border: 1px solid rgba(160, 160, 160, 0.671);
+    border: 0.5px solid rgba(160, 160, 160, 0.671);
     border-radius: 5px;
 }
 
@@ -113,5 +113,5 @@ input[type=text] {
   }
   
   input[type=text]:focus {
-    width: 70%;
+    width: 75%;
   }
