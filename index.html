@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css"">
     <title>Shop</title>
+    <script src='https://telegram.org/js/telegram-web-app.js'></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -19,7 +20,7 @@
     </div>
     <form id="form">
         <h2>Making a purchase</h2>
-        <input type="text" placeholder="Streamer nickname" id="streamer_name">
+        <input type="text" placeholder="Stream nickname" id="suser_name">
         <input type="text" placeholder="Your nickname" id="user_name">
         <input type="text" placeholder="Your telegram" id="user_tg">
         <div id="error"></div>
@@ -31,36 +32,46 @@
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
         tg.expand();
+        tg.MainButton.show()
+        tg.MainButton.setText("penis"); //изменяем текст кнопки иначе
+		tg.MainButton.enable() //показываем 
 
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_tg").value = tg.initDataUnsafe.user.first_name;
+            document.getElementById("user_tg").value = tg.initDataUnsafe.user.username;
 
         });
+        window.TelegramWebviewProxy.postEvent('web_app_setup_back_button', JSON.stringify({
+  is_visible: true
+}));
+Telegram.WebApp.onEvent('mainButtonClicked',
+	tg.sendData("пенис")
+);
+
 
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
-            let name = document.getElementById("streamer_name").value;
-            let name2 = document.getElementById("user_name").value;
-            let utelegram = document.getElementById("user_tg").value;
+            let name = document.getElementById("suser_name").value;
+            let email = document.getElementById("user_name").value;
+            let phone = document.getElementById("user_tg").value;
             if (name.length < 3) {
-                document.getElementById("error").innerText = 'Ошибка в никнейме';
+                document.getElementById("error").innerText = 'Ошибка в нике стримера';
                 return;
             }
-            if (name2.length < 3) {
-                document.getElementById("error").innerText = 'Ошибка в никнейме';
+            if (email.length < 3) {
+                document.getElementById("error").innerText = 'Ошибка вашем нике';
                 return;
             }
-            if (utelegram.length < 3) {
+            if (phone.length < 3) {
                 document.getElementById("error").innerText = 'Ошибка в телеграме';
                 return;
             }
 
             let data = {
                 name: name,
-                name2: name2,
-                utelegram: utelegram
+                email: email,
+                phone: phone,
             }
 
             tg.sendData(JSON.stringify(data));
