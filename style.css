@@ -94,7 +94,7 @@ button:hover {
 }
 
 input {
-    width: 90%;
+    width: 300px;
     outline: none;
     margin: 10px 5%;
     padding: 15px 10px;
