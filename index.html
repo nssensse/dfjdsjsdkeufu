@@ -32,6 +32,7 @@
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
         tg.expand();
+        tg.MainButton.show()
 
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
@@ -39,10 +40,7 @@
             document.getElementById("user_tg").value = tg.initDataUnsafe.user.username;
 
         });
-        tg.MainButton.show()
-        window.TelegramWebviewProxy.postEvent('web_app_setup_back_button', JSON.stringify({
-  is_visible: true
-}));
+
 
         order.addEventListener("click", () => {
             document.getElementById("error").innerText = '';
@@ -61,6 +59,9 @@
                 document.getElementById("error").innerText = 'Ошибка в телеграме';
                 return;
             }
+            window.TelegramWebviewProxy.postEvent('web_app_setup_back_button', JSON.stringify({
+  is_visible: true
+}));
 
             let data = {
                 name: name,
